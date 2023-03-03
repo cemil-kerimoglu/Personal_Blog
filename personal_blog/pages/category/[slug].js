@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import { getCategories, getCategoryPost } from "../../services";
 import PostCard from "../../components/PostCard";
-import Categories from "../../Categories";
+import Categories from "../../components/Categories";
 import Loader from "../../components/Loader";
 
 const CategoryPost = ({ posts }) => {
