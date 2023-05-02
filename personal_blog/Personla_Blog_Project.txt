@@ -1,0 +1,5 @@
+Frontend: localhost:3000
+"npm run dev" from /client
+
+Backend: localhost:5000/graphql
+"npm run dev" from /server 
