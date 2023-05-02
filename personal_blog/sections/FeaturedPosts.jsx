@@ -39,7 +39,7 @@ const FeaturedPosts = () => {
     <div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-white w-fullx"
+        className="h-6 text-white w-full"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -58,7 +58,7 @@ const FeaturedPosts = () => {
     <div className="absolute arrow-btn right-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-white w-fullx"
+        className="h-6 text-white w-full"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -83,9 +83,10 @@ const FeaturedPosts = () => {
         itemClass="px-4"
       >
         {dataLoaded &&
-          featuredPosts.map((post, index) => (
-            <FeaturedPostCard key={index} post={post} />
-          ))}
+          featuredPosts
+            .slice(0)
+            .reverse()
+            .map((post, index) => <FeaturedPostCard key={index} post={post} />)}
       </Carousel>
     </div>
   );
